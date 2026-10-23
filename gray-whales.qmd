@@ -1,0 +1,38 @@
+---
+title: "Gray whale body length"
+author: "elvirerik"
+date: today
+format:
+  html:
+    embed-resources: true
+---
+
+## Question
+
+Does gray whale body length increase with age, and does it differ by sex?
+
+## Data
+
+Drone-based measurements of gray whales from the R package `Xcertainty` (Bierlich et al. 2024, <https://doi.org/10.1111/gcb.17366>). Body length was measured in pixels and converted to meters using the drone's altitude and camera settings. Images without a length or altitude were removed.
+
+```{r}
+#| label: load-data
+#| include: false
+library(tidyverse)
+library(here)
+whales_clean <- read_csv(here("data", "clean", "whales_clean.csv"))
+```
+
+After cleaning, the data contain `r nrow(whales_clean)` images of `r n_distinct(whales_clean$whale_id)` individual whales.
+
+## Result
+
+```{r}
+#| label: fig-length-age
+#| fig-cap: "Mean body length against age, per whale and year."
+knitr::include_graphics(here("output", "figure_length_vs_age.png"))
+```
+
+## Reproducibility
+
+This report was made with the scripts in the `scripts/` folder. See the README for how to run them.
