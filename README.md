@@ -19,5 +19,4 @@ This exercise cleans drone measurements of gray whales and shows how body length
 - `scripts/01_load_data.R`: load data, save raw copy
 - `scripts/02_clean_data.R`: minimal cleaning
 - `scripts/03_make_figure.R`: make the figure
-- `report.qmd`: the report
 - `renv.lock`: package versions
