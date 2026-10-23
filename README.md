@@ -12,7 +12,7 @@ This exercise cleans drone measurements of gray whales and shows how body length
 2. Install the exact package versions: `renv::restore()`
 3. Run the scripts in `scripts/` in order: `01_`, `02_`, `03_`
    (`00_functions.R` is loaded automatically by script 02).
-4. Open `report.qmd` and click Render.
+4. Open `gray-whales.qmd` and click Render.
 
 ## Files
 - `scripts/00_functions.R`: function to convert pixels to metres
